@@ -16,7 +16,7 @@
 (function ($) {
     "use strict";
 
-    String.prototype.strReverse = function () {
+    String.prototype.reverseString = function () {
         var newstring = "";
         for (var s = 0; s < this.length; s++) {
             newstring = this.charAt(s) + newstring;
@@ -143,7 +143,7 @@
             /* Check for sequential alpha string patterns (forward and reverse) */
             for (var s = 0; s < 23; s++) {
                 var sFwd = sAlphas.substring(s, parseInt(s + 3));
-                var sRev = sFwd.strReverse();
+                var sRev = sFwd.reverseString();
                 if (text.toLowerCase().indexOf(sFwd) != -1 || text.toLowerCase().indexOf(sRev) != -1) {
                     nSeqAlpha++;
                     nSeqChar++;
@@ -153,7 +153,7 @@
             /* Check for sequential numeric string patterns (forward and reverse) */
             for (var s = 0; s < 8; s++) {
                 var sFwd = sNumerics.substring(s, parseInt(s + 3));
-                var sRev = sFwd.strReverse();
+                var sRev = sFwd.reverseString();
                 if (text.toLowerCase().indexOf(sFwd) != -1 || text.toLowerCase().indexOf(sRev) != -1) {
                     nSeqNumber++;
                     nSeqChar++;
@@ -163,7 +163,7 @@
             /* Check for sequential symbol string patterns (forward and reverse) */
             for (var s = 0; s < 8; s++) {
                 var sFwd = sSymbols.substring(s, parseInt(s + 3));
-                var sRev = sFwd.strReverse();
+                var sRev = sFwd.reverseString();
                 if (text.toLowerCase().indexOf(sFwd) != -1 || text.toLowerCase().indexOf(sRev) != -1) {
                     nSeqSymbol++;
                     nSeqChar++;
