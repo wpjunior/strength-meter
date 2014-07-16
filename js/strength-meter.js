@@ -405,8 +405,8 @@
 
     $.fn.strength.defaults = {
         showMeter: true,
-        toggleMask: true,
-        inputTemplate: '<div class="input-group">\n{input}\n<span class="input-group-addon">{toggle}</span>\n</div>',
+        toggleMask: false,
+        inputTemplate: '<div class="input-group input-group-lg">\n{input}\n</div>',
         meterTemplate: '<div class="kv-scorebar-border">{scorebar}\n{score}</div>\n{verdict}',
         mainTemplate: '<table class="kv-container"><tr>\n<td>{input}</td>\n<td class="kv-meter-container"W>{meter}</td>\n</tr></table>',
         meterClass: 'kv-meter',
